@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-from validate_contribution import validate_contribution  # noqa: E402
+from validate_contribution import validate_contribution
 
 ENVIRONMENTS_DIR = Path(__file__).resolve().parent.parent / "environments"
 

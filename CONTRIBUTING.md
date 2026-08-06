@@ -1,6 +1,6 @@
 # Contributing a task
 
-A contribution is a self-contained folder under `environments/<task_name>/` with everything needed to run and score the task — modeled on the existing [`environments/psychscanner_rm_encoding/`](environments/psychscanner_rm_encoding), which is the reference example to copy from:
+A contribution is a self-contained folder under `environments/<task_name>/` with everything needed to run and score the task — modeled on the existing [`environments/psychscanner_rm_encoding/`](https://github.com/saurabhr/psychscanner-primal/tree/main/environments/psychscanner_rm_encoding), which is the reference example to copy from:
 
 ```
 environments/<task_name>/
@@ -11,6 +11,8 @@ environments/<task_name>/
 ```
 
 There's no requirement to reuse the Reality Monitoring or PAL50 scoring logic — a contribution can define its own trial data, its own parser, and its own correct/incorrect rule in `<task_name>.py`, as long as it's an honest, documented reward signal (see the "Scope" section of the rm_encoding README for how to be upfront about what a proxy metric does and doesn't cover).
+
+Not the same thing as [`task_library()`](https://github.com/saurabhr/psychscanner-primal/blob/main/src/psychscanner/task_library.py): that's a runtime lookup for a bare task-card JSON (stimuli only), used from Python code via the `psychscanner` API. This workflow is for a full packaged, scored environment meant to ship on the Hub.
 
 ## Build it as a draft first
 
@@ -53,7 +55,9 @@ Once your folder is in `environments/<task_name>/` and validation passes, regene
 python scripts/task_ledger.py build
 ```
 
+If you're flagged but believe it's a false positive — a genuine, independent task that happens to share stimuli or a name with an existing one — don't work around the check. [Open an issue](https://github.com/saurabhr/psychscanner-primal/issues) explaining why, and a maintainer will sort it out with you.
+
 ## Releasing on the Hub
 
 1. Open a PR against this repo with your `environments/<task_name>/` folder (and the regenerated `TASK_LEDGER.json`). A maintainer reviews the scoring logic and scope claims.
-2. Once merged, publish it to the Prime Intellect Environments Hub yourself with the `prime` CLI from inside your environment folder (`prime env push`) — this repo doesn't automate that step; see the [Hub docs](https://docs.primeintellect.ai/tutorials-environments/environments) for the push/registration flow.
+2. Once merged, publish it to the Prime Intellect Environments Hub yourself with the `prime` CLI from inside your environment folder (`prime env push`) — this repo doesn't automate that step. New to the Hub? See [Prime Intellect Environments Hub](https://github.com/saurabhr/psychscanner-primal/blob/main/docs/content/prime_intellect_hub.md) in this repo's docs for a plain-language walkthrough of `prime env push` / `prime eval run`, or the [official Hub docs](https://docs.primeintellect.ai/tutorials-environments/environments) for the full reference.

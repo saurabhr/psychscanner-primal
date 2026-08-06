@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-from task_ledger import build_ledger, find_duplicates  # noqa: E402
+from task_ledger import build_ledger, find_duplicates
 
 ENVIRONMENTS_DIR = Path(__file__).resolve().parent.parent / "environments"
 

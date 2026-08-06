@@ -1,0 +1,43 @@
+name: Validate environments
+
+on:
+  pull_request:
+    paths:
+      - "environments/**"
+      - "TASK_LEDGER.json"
+      - "scripts/**"
+      - ".github/workflows/validate-environments.yml"
+  push:
+    branches: [main]
+    paths:
+      - "environments/**"
+      - "TASK_LEDGER.json"
+      - "scripts/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate every environments/<name>/ folder
+        run: |
+          set -e
+          shopt -s nullglob
+          for dir in environments/*/; do
+            echo "::group::validate $dir"
+            python scripts/validate_contribution.py "$dir"
+            echo "::endgroup::"
+          done
+
+      - name: Check TASK_LEDGER.json is up to date
+        run: |
+          python scripts/task_ledger.py build
+          if ! git diff --exit-code TASK_LEDGER.json; then
+            echo "::error::TASK_LEDGER.json is stale — run 'python scripts/task_ledger.py build' and commit the result."
+            exit 1
+          fi
