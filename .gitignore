@@ -81,3 +81,12 @@ results/
 *.psyscan
 *-tunnel.json
 graphify-out/
+
+# Claude Code local settings
+.claude/
+
+# local contribution staging (drafts + validator reports, never committed)
+.contrib/
+
+# local manuscript-prep drafts (never committed)
+.manuscript/
