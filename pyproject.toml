@@ -52,6 +52,11 @@ multimodal = [
     "beautifulsoup4",
     "httpx",
 ]
+docs = [
+    "marimo-book",
+    "verifiers",
+    "datasets",
+]
 dev = [
     "psychscanner-primal[tests,multimodal]",
 ]

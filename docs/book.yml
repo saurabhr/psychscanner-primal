@@ -14,6 +14,9 @@ branch: main
 #   palette:
 #     primary: "#1976D2"
 #     accent:  "#FF9800"
+theme:
+  font:
+    text: "Palatino Linotype"
 
 # Per-chapter launch buttons. molab / download apply to .py only; github
 # applies to both .md and .py. Set any of these to false to hide them.
@@ -44,9 +47,13 @@ dependencies:
 
 toc:
   - file: content/intro.md
+  - file: content/using_psychscanner_primal.md
+    title: Using psychscanner-primal
   - file: content/quickstart.py
   - file: content/prime_intellect_hub.md
     title: Prime Intellect Environments Hub
+  - file: content/hub_tutorial.py
+    title: Hub environment tutorial
   - file: content/contributing.md
     title: Contributing a task
   - file: content/hub_environment.md
