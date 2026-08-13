@@ -8,7 +8,7 @@ The [Environments Hub](https://app.primeintellect.ai/dashboard/environments) is 
 
 Under the hood, every Hub environment is built on [`verifiers`](https://github.com/PrimeIntellect-ai/verifiers) — a small framework for exactly this: a dataset, a parser for the model's output, and a rubric (reward function) that scores it. That's what `environments/psychscanner_nback/psychscanner_nback.py` in this repo is — a `verifiers` environment, ready to push to the Hub.
 
-This is the reason `psychscanner-primal` exists as a separate, slim package in the first place (see the [Home](index.md) page): it's the minimal runtime a Hub environment needs to import, stripped of everything (surveys, agent architectures, interpretability backends) that doesn't carry a reward signal.
+This is the reason `psychscanner-primal` exists as a separate, slim package in the first place (see the [Home](intro.md) page): it's the minimal runtime a Hub environment needs to import, stripped of everything (surveys, agent architectures, interpretability backends) that doesn't carry a reward signal.
 
 ## Install the CLI
 

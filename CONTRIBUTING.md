@@ -61,3 +61,13 @@ If you're flagged but believe it's a false positive — a genuine, independent t
 
 1. Open a PR against this repo with your `environments/<task_name>/` folder (and the regenerated `TASK_LEDGER.json`). A maintainer reviews the scoring logic and scope claims.
 2. Once merged, publish it to the Prime Intellect Environments Hub yourself with the `prime` CLI from inside your environment folder (`prime env push`) — this repo doesn't automate that step. New to the Hub? See [Prime Intellect Environments Hub](https://github.com/saurabhr/psychscanner-primal/blob/main/docs/content/prime_intellect_hub.md) in this repo's docs for a plain-language walkthrough of `prime env push` / `prime eval run`, or the [official Hub docs](https://docs.primeintellect.ai/tutorials-environments/environments) for the full reference.
+
+## Publishing directly from your fork (skip the PR)
+
+Don't want to wait on review, or the task doesn't fit this repo's canon (a personal variant, a niche paradigm, a work in progress)? Fork `psychscanner-primal` and publish straight from your fork instead:
+
+1. Add your `environments/<task_name>/` folder the same way as above, and validate it locally (`scripts/validate_contribution.py`) — the folder shape checks still apply even without a PR.
+2. Name the Hub environment `<task_name>-psyscan` (task-based, e.g. `stroop-psyscan`) or `<agent_name>-psyscan` (agent-based, e.g. `react-agent-psyscan`) — the `-psyscan` suffix credits this framework without implying it's an official, reviewed psychscanner-primal release.
+3. `prime env push` from inside your environment folder, same command as the reviewed workflow.
+
+This skips the ledger/dedup check and maintainer review a PR gets, so the honest-scoring and no-silent-duplicate guarantees are on you — link back to your fork in the Hub listing so users know it's community-published, not canonical.
