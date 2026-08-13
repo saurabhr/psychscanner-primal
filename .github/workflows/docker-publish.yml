@@ -25,6 +25,10 @@ jobs:
         id: meta
         with:
           images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=ps-primal
+            type=ref,event=branch
+            type=ref,event=tag
 
       - uses: docker/build-push-action@v6
         with:
