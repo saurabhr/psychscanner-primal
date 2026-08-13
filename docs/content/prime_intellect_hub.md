@@ -56,6 +56,16 @@ vf-eval psychscanner_nback --provider local \
   -m smollm2:360m-instruct-fp16 -n 8 -r 1
 ```
 
+## Copying and modifying an existing environment
+
+Want to start from someone else's published environment instead of building from scratch — this repo's `psychscanner-nback`, or anyone else's? `prime env pull` downloads an environment's source so you can edit it locally:
+
+```bash
+prime env pull <owner>/<environment_name>
+```
+
+Edit the pulled module, then `prime env push` it under a new name. The Hub itself doesn't enforce any naming scheme for derivatives — it publishes whatever name is in your environment's metadata under your own account — so this repo uses its own convention: suffix the name with `-psyscan` (e.g. `stroop-psyscan`, `react-agent-psyscan`) to credit the framework without implying it's an official release. See **Contributing a task** for the full workflow.
+
 ## Publishing a new environment
 
 This is the other direction — you built a new task (see **Contributing a task**) and want it runnable by anyone via `prime eval run`.

@@ -64,10 +64,15 @@ If you're flagged but believe it's a false positive — a genuine, independent t
 
 ## Publishing directly from your fork (skip the PR)
 
-Don't want to wait on review, or the task doesn't fit this repo's canon (a personal variant, a niche paradigm, a work in progress)? Fork `psychscanner-primal` and publish straight from your fork instead:
+Don't want to wait on review, or the task doesn't fit this repo's canon (a personal variant, a niche paradigm, a work in progress)? Skip the PR and publish straight from your own copy instead. Two ways to get a starting copy:
 
-1. Add your `environments/<task_name>/` folder the same way as above, and validate it locally (`scripts/validate_contribution.py`) — the folder shape checks still apply even without a PR.
-2. Name the Hub environment `<task_name>-psyscan` (task-based, e.g. `stroop-psyscan`) or `<agent_name>-psyscan` (agent-based, e.g. `react-agent-psyscan`) — the `-psyscan` suffix credits this framework without implying it's an official, reviewed psychscanner-primal release.
+- **Fork `psychscanner-primal` on GitHub** — gives you the whole repo (tests, `validate_contribution.py`, the task ledger) to build a new `environments/<task_name>/` folder against, same shape as above.
+- **`prime env pull <owner>/<environment_name>`** — the Hub-native shortcut. Pulls any already-published environment's source (this repo's `psychscanner-nback`, or anyone else's) straight from the Hub, no git clone needed, so you can start from working code and modify it in place.
+
+Either way:
+
+1. Validate locally (`scripts/validate_contribution.py`) — the folder shape checks still apply even without a PR.
+2. Name the Hub environment `<task_name>-psyscan` (task-based, e.g. `stroop-psyscan`) or `<agent_name>-psyscan` (agent-based, e.g. `react-agent-psyscan`) — the `-psyscan` suffix credits this framework without implying it's an official, reviewed psychscanner-primal release. This is this repo's own convention, not something the Hub enforces — `prime env push` will happily publish under any name.
 3. `prime env push` from inside your environment folder, same command as the reviewed workflow.
 
-This skips the ledger/dedup check and maintainer review a PR gets, so the honest-scoring and no-silent-duplicate guarantees are on you — link back to your fork in the Hub listing so users know it's community-published, not canonical.
+This skips the ledger/dedup check and maintainer review a PR gets, so the honest-scoring and no-silent-duplicate guarantees are on you — link back to your source (fork or original environment) in the Hub listing so users know it's community-published, not canonical.
