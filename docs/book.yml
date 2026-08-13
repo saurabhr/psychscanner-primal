@@ -49,18 +49,18 @@ toc:
   - file: content/intro.md
   - file: content/using_psychscanner_primal.md
     title: Using psychscanner-primal
+  - file: content/prime_intellect_hub.md
+    title: Prime Intellect Environments Hub
   - file: content/quickstart.py
   - file: content/write_your_own_task.md
     title: Write and run your own task
   - file: content/conditional_next_trial.md
     title: Conditional Next Trial
-  - file: content/prime_intellect_hub.md
-    title: Prime Intellect Environments Hub
   - file: content/hub_tutorial.py
     title: Hub environment tutorial
   - file: content/contributing.md
     title: Contributing a task
   - file: content/hub_environment.md
-    title: Reality Monitoring environment
+    title: N-back environment
   - url: https://psychscanner.readthedocs.io/en/latest/
     title: Read about psychscanner

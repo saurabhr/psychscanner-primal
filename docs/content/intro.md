@@ -48,4 +48,4 @@ uv pip install -e .
 2. See **Write and run your own task** to author a task card from scratch and point it at a real model.
 3. See **Conditional Next Trial** to branch the trial sequence adaptively based on the model's response.
 4. See **Contributing a task** if you want to add a new cognitive task and release it as a Hub environment.
-5. See **Reality Monitoring environment** for the one task already shipped on the Hub.
+5. See **N-back environment** for the one task already shipped on the Hub.
