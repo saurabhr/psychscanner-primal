@@ -8,6 +8,7 @@ on:
       - "environments/**"
       - "examples/**"
       - "src/**"
+      - "scripts/inject_new_tab_links.py"
       - "CONTRIBUTING.md"
       - "pyproject.toml"
       - ".github/workflows/deploy-docs.yml"
@@ -39,6 +40,9 @@ jobs:
       - name: Build site
         working-directory: docs
         run: marimo-book build --strict --clean
+
+      - name: Open every link in a new tab
+        run: python3 scripts/inject_new_tab_links.py docs/_site
 
       - uses: actions/upload-pages-artifact@v3
         with:
