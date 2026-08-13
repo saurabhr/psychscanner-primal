@@ -1,4 +1,4 @@
-"""Smoke test for the contribution validator: passes on the bundled RM environment, fails on junk."""
+"""Smoke test for the contribution validator: passes on the bundled n-back environment, fails on junk."""
 import sys
 from pathlib import Path
 
@@ -9,7 +9,7 @@ ENVIRONMENTS_DIR = Path(__file__).resolve().parent.parent / "environments"
 
 
 def test_validate_passes_on_bundled_environment():
-    errors = validate_contribution(ENVIRONMENTS_DIR / "psychscanner_rm_encoding")
+    errors = validate_contribution(ENVIRONMENTS_DIR / "psychscanner_nback")
     assert errors == []
 
 

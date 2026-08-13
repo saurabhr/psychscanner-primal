@@ -4,7 +4,7 @@
 A contribution is a self-contained folder under `environments/<task_name>/`
 containing everything needed to run and score the task: the verifiers
 Environment module, its pyproject.toml, a README, and the task JSON data
-file(s) it depends on — see `environments/psychscanner_rm_encoding/` for
+file(s) it depends on — see `environments/psychscanner_nback/` for
 a worked example. This script checks that shape locally, before a human
 reviewer or the Hub has to.
 
