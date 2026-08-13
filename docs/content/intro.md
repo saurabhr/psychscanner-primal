@@ -16,6 +16,15 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 - Only the feedback-scored task cards: Reality Monitoring (`rm_*`) and paired-associate learning (`pal50`).
 - `CustomAgent`/`ScanningAgent` adapter protocol, for plugging in your own agent.
 
+Also exported, not walked through elsewhere in these docs:
+
+- `save_expcard(card_in, path=None)` — serialize an `ExpCardInit` to a portable, JSON-safe dict, for reproducing an experiment on another machine.
+- `list_task_library(dirs=None)` — list every task-card name discoverable by `task_library`.
+- `concat_csv(sources, path=None, sep=",")` — concatenate simulation output from multiple sources into one CSV.
+- `factory_settings` — module of default `ExpCardInit` values (`DEFAULT_MODEL_NAME`, `DEFAULT_FAMILY_NAME`, etc.).
+- `get_task_template(ttype=None)` — return a blank task-card dict scaffold.
+- `TaskSimulationModel`, `TrialSimulationModel`, `TrialInfoModel`, `InputSimulationModel`, `PredSimulationModel` — the typed building blocks of `SimulationModel`'s nested per-trial result structure.
+
 ## What's excluded
 
 - Psychometric surveys (`bfi44`, `vviq16`, `example_survey`) — no ground truth to score against, so no reward signal.
