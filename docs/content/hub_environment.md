@@ -1,1 +1,1 @@
-../../environments/psychscanner_rm_encoding/README.md
+../../environments/psychscanner_nback/README.md
