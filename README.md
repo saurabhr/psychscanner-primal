@@ -1,6 +1,6 @@
 # psychscanner-primal
 
-![logo](docs/logo.jpeg)
+![logo](docs/images/logo.jpeg)
 
 [![Docs](https://img.shields.io/badge/docs-latest-blue)](https://saurabhr.github.io/psychscanner-primal/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/saurabhr/psychscanner-primal/pulls)
