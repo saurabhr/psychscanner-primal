@@ -2,7 +2,9 @@
 
 ![logo](docs/logo.jpeg)
 
-[Full docs site](https://saurabhr.github.io/psychscanner-primal/)
+[![Docs](https://img.shields.io/badge/docs-latest-blue)](https://saurabhr.github.io/psychscanner-primal/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/saurabhr/psychscanner-primal/pulls)
+[![Contributors](https://img.shields.io/github/contributors/saurabhr/psychscanner-primal.svg)](https://github.com/saurabhr/psychscanner-primal/graphs/contributors)
 
 Slim, Hub-optimized distribution of [psychscanner](https://github.com/saurabhr/psychscanner) — a framework for running psychological experiments with large language models.
 
