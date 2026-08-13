@@ -6,6 +6,7 @@ psychscanner-primal only ships tasks that have a real per-trial correct/incorrec
 
 ## Files
 
+- `nback_demo.json` - N-back working-memory task (n=1,2,3 routines), default task card — run with `memory="Convo"` (`memory_k=5` for conversation memory, or add `summary_k=10` for summary memory)
 - `pal50.json` - Paired-associate learning task (50 word pairs, study + test phases)
 - `rm_singleturn_demo.json` - Relational-memory task, single-turn trial
 - `rm_trialchain_demo.json` - Relational-memory task, chained trials
