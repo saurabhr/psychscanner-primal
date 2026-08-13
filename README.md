@@ -1,5 +1,7 @@
 # psychscanner-primal
 
+![logo](docs/logo.jpeg)
+
 Slim, Hub-optimized distribution of [psychscanner](https://github.com/saurabhr/psychscanner) — a framework for running psychological experiments with large language models.
 
 This package exists as a lightweight dependency for RL/eval tooling such as the [Prime Intellect Environments Hub](https://docs.primeintellect.ai/tutorials-environments/environments): it carries only the tasks that have a real per-trial correct/incorrect signal, so they can be scored as a reward, plus the runtime needed to execute them. It does **not** itself register anything with Prime Intellect or depend on `verifiers` — it's the stable, minimal thing a Hub environment package would import.
@@ -9,7 +11,7 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 ## What's different from psychscanner
 
 **Included:**
-- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, parsers, `task_library`, `SessionTunnel`, `SimulationModel`.
+- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `SessionTunnel`, `SimulationModel`.
 - Multi-provider model calling via LangChain (OpenAI, Anthropic, Groq, Mistral, Google, Ollama, HuggingFace, etc.) — same as upstream.
 - Only the feedback-scored task cards: Reality Monitoring (`rm_*`) and paired-associate learning (`pal50`) — see [`examples/tasks/`](examples/tasks/).
 - `CustomAgent`/`ScanningAgent` adapter protocol, for plugging in your own agent.
