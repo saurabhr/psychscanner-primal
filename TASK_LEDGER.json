@@ -1,6 +1,10 @@
 {
-  "psychscanner_rm_encoding": {
-    "content_hash": "712bab2303a55fb769ba43f95a92025237ee50d9ea9859abb61d5e84994002af",
-    "path": "environments/psychscanner_rm_encoding"
+  "ps_primal": {
+    "content_hash": "d7fca6bac58467c3eeb01011ca31fee962b8c0a5b7e1ab01de009c594346d8d8",
+    "path": "environments/ps_primal"
+  },
+  "psychscanner_nback": {
+    "content_hash": "da28201d040350eff8c652677c9fe49d73011c2f64d27fb5088494148baf934c",
+    "path": "environments/psychscanner_nback"
   }
 }

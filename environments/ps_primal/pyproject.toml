@@ -1,6 +1,6 @@
 [project]
-name = "psychscanner-rm-encoding"
-description = "Reality Monitoring (encoding-phase) task from psychscanner: score whether a model correctly echoes a perceived word or generates a valid novel word for an imagined one."
+name = "ps-primal"
+description = "Paired-associate recall (single-turn proxy) from psychscanner: score word-pair recall accuracy across five semantic-similarity levels."
 tags = ["psychology", "cognitive-science", "memory", "single-turn", "train", "eval"]
 version = "0.1.0"
 requires-python = ">=3.10"
@@ -13,8 +13,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build]
-include = ["psychscanner_rm_encoding.py", "pyproject.toml", "rm_singleturn_demo.json"]
+include = ["ps_primal.py", "pyproject.toml", "pal50.json"]
 
 [tool.verifiers.eval]
-num_examples = 8
+num_examples = 10
 rollouts_per_example = 3

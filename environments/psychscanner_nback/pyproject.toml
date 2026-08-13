@@ -1,0 +1,20 @@
+[project]
+name = "psychscanner-nback"
+description = "N-back working-memory task from psychscanner: judge whether the current letter matches the one n positions back, under conversation- vs summary-memory history conditions."
+tags = ["psychology", "cognitive-science", "working-memory", "single-turn", "train", "eval"]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "verifiers>=0.2.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["psychscanner_nback.py", "pyproject.toml", "nback_demo.json"]
+
+[tool.verifiers.eval]
+num_examples = 132
+rollouts_per_example = 3

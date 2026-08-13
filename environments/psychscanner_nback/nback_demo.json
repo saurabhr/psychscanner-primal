@@ -1,0 +1,1207 @@
+{
+  "tasktype": "sc",
+  "taskname": "nback_demo",
+  "n_levels": [
+    1,
+    2,
+    3
+  ],
+  "memory_conditions": {
+    "conversation": {
+      "memory_k": 5
+    },
+    "summary": {
+      "summary_k": 10
+    }
+  },
+  "items": {
+    "n1_conversation_1": {
+      "trcode": "n1_conversation_1",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 1,
+      "history_text": "Last 1 letters shown (oldest to newest): C.",
+      "letter": "K",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_2": {
+      "trcode": "n1_conversation_2",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 2,
+      "history_text": "Last 2 letters shown (oldest to newest): C, K.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_3": {
+      "trcode": "n1_conversation_3",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 3,
+      "history_text": "Last 3 letters shown (oldest to newest): C, K, D.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_4": {
+      "trcode": "n1_conversation_4",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 4,
+      "history_text": "Last 4 letters shown (oldest to newest): C, K, D, R.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_5": {
+      "trcode": "n1_conversation_5",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 5,
+      "history_text": "Last 5 letters shown (oldest to newest): C, K, D, R, S.",
+      "letter": "Y",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_6": {
+      "trcode": "n1_conversation_6",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 6,
+      "history_text": "Last 5 letters shown (oldest to newest): K, D, R, S, Y.",
+      "letter": "Q",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_7": {
+      "trcode": "n1_conversation_7",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 7,
+      "history_text": "Last 5 letters shown (oldest to newest): D, R, S, Y, Q.",
+      "letter": "J",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_8": {
+      "trcode": "n1_conversation_8",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 8,
+      "history_text": "Last 5 letters shown (oldest to newest): R, S, Y, Q, J.",
+      "letter": "C",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_9": {
+      "trcode": "n1_conversation_9",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 9,
+      "history_text": "Last 5 letters shown (oldest to newest): S, Y, Q, J, C.",
+      "letter": "C",
+      "corrAns": "match"
+    },
+    "n1_conversation_10": {
+      "trcode": "n1_conversation_10",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 10,
+      "history_text": "Last 5 letters shown (oldest to newest): Y, Q, J, C, C.",
+      "letter": "V",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_11": {
+      "trcode": "n1_conversation_11",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 11,
+      "history_text": "Last 5 letters shown (oldest to newest): Q, J, C, C, V.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_12": {
+      "trcode": "n1_conversation_12",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 12,
+      "history_text": "Last 5 letters shown (oldest to newest): J, C, C, V, Z.",
+      "letter": "J",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_13": {
+      "trcode": "n1_conversation_13",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 13,
+      "history_text": "Last 5 letters shown (oldest to newest): C, C, V, Z, J.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_14": {
+      "trcode": "n1_conversation_14",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 14,
+      "history_text": "Last 5 letters shown (oldest to newest): C, V, Z, J, Z.",
+      "letter": "B",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_15": {
+      "trcode": "n1_conversation_15",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 15,
+      "history_text": "Last 5 letters shown (oldest to newest): V, Z, J, Z, B.",
+      "letter": "G",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_16": {
+      "trcode": "n1_conversation_16",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 16,
+      "history_text": "Last 5 letters shown (oldest to newest): Z, J, Z, B, G.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_17": {
+      "trcode": "n1_conversation_17",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 17,
+      "history_text": "Last 5 letters shown (oldest to newest): J, Z, B, G, S.",
+      "letter": "F",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_18": {
+      "trcode": "n1_conversation_18",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 18,
+      "history_text": "Last 5 letters shown (oldest to newest): Z, B, G, S, F.",
+      "letter": "M",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_19": {
+      "trcode": "n1_conversation_19",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 19,
+      "history_text": "Last 5 letters shown (oldest to newest): B, G, S, F, M.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_20": {
+      "trcode": "n1_conversation_20",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 20,
+      "history_text": "Last 5 letters shown (oldest to newest): G, S, F, M, D.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n1_conversation_21": {
+      "trcode": "n1_conversation_21",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 21,
+      "history_text": "Last 5 letters shown (oldest to newest): S, F, M, D, R.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n1_conversation_22": {
+      "trcode": "n1_conversation_22",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 22,
+      "history_text": "Last 5 letters shown (oldest to newest): F, M, D, R, R.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n1_conversation_23": {
+      "trcode": "n1_conversation_23",
+      "n": 1,
+      "memory_mode": "conversation",
+      "position": 23,
+      "history_text": "Last 5 letters shown (oldest to newest): M, D, R, R, R.",
+      "letter": "G",
+      "corrAns": "no-match"
+    },
+    "n1_summary_1": {
+      "trcode": "n1_summary_1",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 1,
+      "history_text": "Letters shown so far (oldest to newest): C.",
+      "letter": "K",
+      "corrAns": "no-match"
+    },
+    "n1_summary_2": {
+      "trcode": "n1_summary_2",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 2,
+      "history_text": "Letters shown so far (oldest to newest): C, K.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n1_summary_3": {
+      "trcode": "n1_summary_3",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 3,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n1_summary_4": {
+      "trcode": "n1_summary_4",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 4,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n1_summary_5": {
+      "trcode": "n1_summary_5",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 5,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R, S.",
+      "letter": "Y",
+      "corrAns": "no-match"
+    },
+    "n1_summary_6": {
+      "trcode": "n1_summary_6",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 6,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R, S, Y.",
+      "letter": "Q",
+      "corrAns": "no-match"
+    },
+    "n1_summary_7": {
+      "trcode": "n1_summary_7",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 7,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R, S, Y, Q.",
+      "letter": "J",
+      "corrAns": "no-match"
+    },
+    "n1_summary_8": {
+      "trcode": "n1_summary_8",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 8,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R, S, Y, Q, J.",
+      "letter": "C",
+      "corrAns": "no-match"
+    },
+    "n1_summary_9": {
+      "trcode": "n1_summary_9",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 9,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R, S, Y, Q, J, C.",
+      "letter": "C",
+      "corrAns": "match"
+    },
+    "n1_summary_10": {
+      "trcode": "n1_summary_10",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 10,
+      "history_text": "Letters shown so far (oldest to newest): C, K, D, R, S, Y, Q, J, C, C.",
+      "letter": "V",
+      "corrAns": "no-match"
+    },
+    "n1_summary_11": {
+      "trcode": "n1_summary_11",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 11,
+      "history_text": "Summary of the 1 earlier letters (counts): Cx1. Most recent 10 letters (oldest to newest): K, D, R, S, Y, Q, J, C, C, V.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n1_summary_12": {
+      "trcode": "n1_summary_12",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 12,
+      "history_text": "Summary of the 2 earlier letters (counts): Cx1, Kx1. Most recent 10 letters (oldest to newest): D, R, S, Y, Q, J, C, C, V, Z.",
+      "letter": "J",
+      "corrAns": "no-match"
+    },
+    "n1_summary_13": {
+      "trcode": "n1_summary_13",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 13,
+      "history_text": "Summary of the 3 earlier letters (counts): Cx1, Dx1, Kx1. Most recent 10 letters (oldest to newest): R, S, Y, Q, J, C, C, V, Z, J.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n1_summary_14": {
+      "trcode": "n1_summary_14",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 14,
+      "history_text": "Summary of the 4 earlier letters (counts): Cx1, Dx1, Kx1, Rx1. Most recent 10 letters (oldest to newest): S, Y, Q, J, C, C, V, Z, J, Z.",
+      "letter": "B",
+      "corrAns": "no-match"
+    },
+    "n1_summary_15": {
+      "trcode": "n1_summary_15",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 15,
+      "history_text": "Summary of the 5 earlier letters (counts): Cx1, Dx1, Kx1, Rx1, Sx1. Most recent 10 letters (oldest to newest): Y, Q, J, C, C, V, Z, J, Z, B.",
+      "letter": "G",
+      "corrAns": "no-match"
+    },
+    "n1_summary_16": {
+      "trcode": "n1_summary_16",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 16,
+      "history_text": "Summary of the 6 earlier letters (counts): Cx1, Dx1, Kx1, Rx1, Sx1, Yx1. Most recent 10 letters (oldest to newest): Q, J, C, C, V, Z, J, Z, B, G.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n1_summary_17": {
+      "trcode": "n1_summary_17",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 17,
+      "history_text": "Summary of the 7 earlier letters (counts): Cx1, Dx1, Kx1, Qx1, Rx1, Sx1, Yx1. Most recent 10 letters (oldest to newest): J, C, C, V, Z, J, Z, B, G, S.",
+      "letter": "F",
+      "corrAns": "no-match"
+    },
+    "n1_summary_18": {
+      "trcode": "n1_summary_18",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 18,
+      "history_text": "Summary of the 8 earlier letters (counts): Cx1, Dx1, Jx1, Kx1, Qx1, Rx1, Sx1, Yx1. Most recent 10 letters (oldest to newest): C, C, V, Z, J, Z, B, G, S, F.",
+      "letter": "M",
+      "corrAns": "no-match"
+    },
+    "n1_summary_19": {
+      "trcode": "n1_summary_19",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 19,
+      "history_text": "Summary of the 9 earlier letters (counts): Cx2, Dx1, Jx1, Kx1, Qx1, Rx1, Sx1, Yx1. Most recent 10 letters (oldest to newest): C, V, Z, J, Z, B, G, S, F, M.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n1_summary_20": {
+      "trcode": "n1_summary_20",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 20,
+      "history_text": "Summary of the 10 earlier letters (counts): Cx3, Dx1, Jx1, Kx1, Qx1, Rx1, Sx1, Yx1. Most recent 10 letters (oldest to newest): V, Z, J, Z, B, G, S, F, M, D.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n1_summary_21": {
+      "trcode": "n1_summary_21",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 21,
+      "history_text": "Summary of the 11 earlier letters (counts): Cx3, Dx1, Jx1, Kx1, Qx1, Rx1, Sx1, Vx1, Yx1. Most recent 10 letters (oldest to newest): Z, J, Z, B, G, S, F, M, D, R.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n1_summary_22": {
+      "trcode": "n1_summary_22",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 22,
+      "history_text": "Summary of the 12 earlier letters (counts): Cx3, Dx1, Jx1, Kx1, Qx1, Rx1, Sx1, Vx1, Yx1, Zx1. Most recent 10 letters (oldest to newest): J, Z, B, G, S, F, M, D, R, R.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n1_summary_23": {
+      "trcode": "n1_summary_23",
+      "n": 1,
+      "memory_mode": "summary",
+      "position": 23,
+      "history_text": "Summary of the 13 earlier letters (counts): Cx3, Dx1, Jx2, Kx1, Qx1, Rx1, Sx1, Vx1, Yx1, Zx1. Most recent 10 letters (oldest to newest): Z, B, G, S, F, M, D, R, R, R.",
+      "letter": "G",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_2": {
+      "trcode": "n2_conversation_2",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 2,
+      "history_text": "Last 2 letters shown (oldest to newest): V, Y.",
+      "letter": "K",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_3": {
+      "trcode": "n2_conversation_3",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 3,
+      "history_text": "Last 3 letters shown (oldest to newest): V, Y, K.",
+      "letter": "Y",
+      "corrAns": "match"
+    },
+    "n2_conversation_4": {
+      "trcode": "n2_conversation_4",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 4,
+      "history_text": "Last 4 letters shown (oldest to newest): V, Y, K, Y.",
+      "letter": "K",
+      "corrAns": "match"
+    },
+    "n2_conversation_5": {
+      "trcode": "n2_conversation_5",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 5,
+      "history_text": "Last 5 letters shown (oldest to newest): V, Y, K, Y, K.",
+      "letter": "Y",
+      "corrAns": "match"
+    },
+    "n2_conversation_6": {
+      "trcode": "n2_conversation_6",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 6,
+      "history_text": "Last 5 letters shown (oldest to newest): Y, K, Y, K, Y.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_7": {
+      "trcode": "n2_conversation_7",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 7,
+      "history_text": "Last 5 letters shown (oldest to newest): K, Y, K, Y, D.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_8": {
+      "trcode": "n2_conversation_8",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 8,
+      "history_text": "Last 5 letters shown (oldest to newest): Y, K, Y, D, R.",
+      "letter": "L",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_9": {
+      "trcode": "n2_conversation_9",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 9,
+      "history_text": "Last 5 letters shown (oldest to newest): K, Y, D, R, L.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n2_conversation_10": {
+      "trcode": "n2_conversation_10",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 10,
+      "history_text": "Last 5 letters shown (oldest to newest): Y, D, R, L, R.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_11": {
+      "trcode": "n2_conversation_11",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 11,
+      "history_text": "Last 5 letters shown (oldest to newest): D, R, L, R, S.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n2_conversation_12": {
+      "trcode": "n2_conversation_12",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 12,
+      "history_text": "Last 5 letters shown (oldest to newest): R, L, R, S, R.",
+      "letter": "G",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_13": {
+      "trcode": "n2_conversation_13",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 13,
+      "history_text": "Last 5 letters shown (oldest to newest): L, R, S, R, G.",
+      "letter": "H",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_14": {
+      "trcode": "n2_conversation_14",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 14,
+      "history_text": "Last 5 letters shown (oldest to newest): R, S, R, G, H.",
+      "letter": "G",
+      "corrAns": "match"
+    },
+    "n2_conversation_15": {
+      "trcode": "n2_conversation_15",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 15,
+      "history_text": "Last 5 letters shown (oldest to newest): S, R, G, H, G.",
+      "letter": "M",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_16": {
+      "trcode": "n2_conversation_16",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 16,
+      "history_text": "Last 5 letters shown (oldest to newest): R, G, H, G, M.",
+      "letter": "G",
+      "corrAns": "match"
+    },
+    "n2_conversation_17": {
+      "trcode": "n2_conversation_17",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 17,
+      "history_text": "Last 5 letters shown (oldest to newest): G, H, G, M, G.",
+      "letter": "W",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_18": {
+      "trcode": "n2_conversation_18",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 18,
+      "history_text": "Last 5 letters shown (oldest to newest): H, G, M, G, W.",
+      "letter": "T",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_19": {
+      "trcode": "n2_conversation_19",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 19,
+      "history_text": "Last 5 letters shown (oldest to newest): G, M, G, W, T.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_20": {
+      "trcode": "n2_conversation_20",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 20,
+      "history_text": "Last 5 letters shown (oldest to newest): M, G, W, T, D.",
+      "letter": "T",
+      "corrAns": "match"
+    },
+    "n2_conversation_21": {
+      "trcode": "n2_conversation_21",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 21,
+      "history_text": "Last 5 letters shown (oldest to newest): G, W, T, D, T.",
+      "letter": "F",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_22": {
+      "trcode": "n2_conversation_22",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 22,
+      "history_text": "Last 5 letters shown (oldest to newest): W, T, D, T, F.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n2_conversation_23": {
+      "trcode": "n2_conversation_23",
+      "n": 2,
+      "memory_mode": "conversation",
+      "position": 23,
+      "history_text": "Last 5 letters shown (oldest to newest): T, D, T, F, Z.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n2_summary_2": {
+      "trcode": "n2_summary_2",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 2,
+      "history_text": "Letters shown so far (oldest to newest): V, Y.",
+      "letter": "K",
+      "corrAns": "no-match"
+    },
+    "n2_summary_3": {
+      "trcode": "n2_summary_3",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 3,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K.",
+      "letter": "Y",
+      "corrAns": "match"
+    },
+    "n2_summary_4": {
+      "trcode": "n2_summary_4",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 4,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y.",
+      "letter": "K",
+      "corrAns": "match"
+    },
+    "n2_summary_5": {
+      "trcode": "n2_summary_5",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 5,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y, K.",
+      "letter": "Y",
+      "corrAns": "match"
+    },
+    "n2_summary_6": {
+      "trcode": "n2_summary_6",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 6,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y, K, Y.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n2_summary_7": {
+      "trcode": "n2_summary_7",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 7,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y, K, Y, D.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n2_summary_8": {
+      "trcode": "n2_summary_8",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 8,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y, K, Y, D, R.",
+      "letter": "L",
+      "corrAns": "no-match"
+    },
+    "n2_summary_9": {
+      "trcode": "n2_summary_9",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 9,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y, K, Y, D, R, L.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n2_summary_10": {
+      "trcode": "n2_summary_10",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 10,
+      "history_text": "Letters shown so far (oldest to newest): V, Y, K, Y, K, Y, D, R, L, R.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n2_summary_11": {
+      "trcode": "n2_summary_11",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 11,
+      "history_text": "Summary of the 1 earlier letters (counts): Vx1. Most recent 10 letters (oldest to newest): Y, K, Y, K, Y, D, R, L, R, S.",
+      "letter": "R",
+      "corrAns": "match"
+    },
+    "n2_summary_12": {
+      "trcode": "n2_summary_12",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 12,
+      "history_text": "Summary of the 2 earlier letters (counts): Vx1, Yx1. Most recent 10 letters (oldest to newest): K, Y, K, Y, D, R, L, R, S, R.",
+      "letter": "G",
+      "corrAns": "no-match"
+    },
+    "n2_summary_13": {
+      "trcode": "n2_summary_13",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 13,
+      "history_text": "Summary of the 3 earlier letters (counts): Kx1, Vx1, Yx1. Most recent 10 letters (oldest to newest): Y, K, Y, D, R, L, R, S, R, G.",
+      "letter": "H",
+      "corrAns": "no-match"
+    },
+    "n2_summary_14": {
+      "trcode": "n2_summary_14",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 14,
+      "history_text": "Summary of the 4 earlier letters (counts): Kx1, Vx1, Yx2. Most recent 10 letters (oldest to newest): K, Y, D, R, L, R, S, R, G, H.",
+      "letter": "G",
+      "corrAns": "match"
+    },
+    "n2_summary_15": {
+      "trcode": "n2_summary_15",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 15,
+      "history_text": "Summary of the 5 earlier letters (counts): Kx2, Vx1, Yx2. Most recent 10 letters (oldest to newest): Y, D, R, L, R, S, R, G, H, G.",
+      "letter": "M",
+      "corrAns": "no-match"
+    },
+    "n2_summary_16": {
+      "trcode": "n2_summary_16",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 16,
+      "history_text": "Summary of the 6 earlier letters (counts): Kx2, Vx1, Yx3. Most recent 10 letters (oldest to newest): D, R, L, R, S, R, G, H, G, M.",
+      "letter": "G",
+      "corrAns": "match"
+    },
+    "n2_summary_17": {
+      "trcode": "n2_summary_17",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 17,
+      "history_text": "Summary of the 7 earlier letters (counts): Dx1, Kx2, Vx1, Yx3. Most recent 10 letters (oldest to newest): R, L, R, S, R, G, H, G, M, G.",
+      "letter": "W",
+      "corrAns": "no-match"
+    },
+    "n2_summary_18": {
+      "trcode": "n2_summary_18",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 18,
+      "history_text": "Summary of the 8 earlier letters (counts): Dx1, Kx2, Rx1, Vx1, Yx3. Most recent 10 letters (oldest to newest): L, R, S, R, G, H, G, M, G, W.",
+      "letter": "T",
+      "corrAns": "no-match"
+    },
+    "n2_summary_19": {
+      "trcode": "n2_summary_19",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 19,
+      "history_text": "Summary of the 9 earlier letters (counts): Dx1, Kx2, Lx1, Rx1, Vx1, Yx3. Most recent 10 letters (oldest to newest): R, S, R, G, H, G, M, G, W, T.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n2_summary_20": {
+      "trcode": "n2_summary_20",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 20,
+      "history_text": "Summary of the 10 earlier letters (counts): Dx1, Kx2, Lx1, Rx2, Vx1, Yx3. Most recent 10 letters (oldest to newest): S, R, G, H, G, M, G, W, T, D.",
+      "letter": "T",
+      "corrAns": "match"
+    },
+    "n2_summary_21": {
+      "trcode": "n2_summary_21",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 21,
+      "history_text": "Summary of the 11 earlier letters (counts): Dx1, Kx2, Lx1, Rx2, Sx1, Vx1, Yx3. Most recent 10 letters (oldest to newest): R, G, H, G, M, G, W, T, D, T.",
+      "letter": "F",
+      "corrAns": "no-match"
+    },
+    "n2_summary_22": {
+      "trcode": "n2_summary_22",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 22,
+      "history_text": "Summary of the 12 earlier letters (counts): Dx1, Kx2, Lx1, Rx3, Sx1, Vx1, Yx3. Most recent 10 letters (oldest to newest): G, H, G, M, G, W, T, D, T, F.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n2_summary_23": {
+      "trcode": "n2_summary_23",
+      "n": 2,
+      "memory_mode": "summary",
+      "position": 23,
+      "history_text": "Summary of the 13 earlier letters (counts): Dx1, Gx1, Kx2, Lx1, Rx3, Sx1, Vx1, Yx3. Most recent 10 letters (oldest to newest): H, G, M, G, W, T, D, T, F, Z.",
+      "letter": "Z",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_3": {
+      "trcode": "n3_conversation_3",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 3,
+      "history_text": "Last 3 letters shown (oldest to newest): T, W, P.",
+      "letter": "T",
+      "corrAns": "match"
+    },
+    "n3_conversation_4": {
+      "trcode": "n3_conversation_4",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 4,
+      "history_text": "Last 4 letters shown (oldest to newest): T, W, P, T.",
+      "letter": "X",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_5": {
+      "trcode": "n3_conversation_5",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 5,
+      "history_text": "Last 5 letters shown (oldest to newest): T, W, P, T, X.",
+      "letter": "B",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_6": {
+      "trcode": "n3_conversation_6",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 6,
+      "history_text": "Last 5 letters shown (oldest to newest): W, P, T, X, B.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_7": {
+      "trcode": "n3_conversation_7",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 7,
+      "history_text": "Last 5 letters shown (oldest to newest): P, T, X, B, D.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_8": {
+      "trcode": "n3_conversation_8",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 8,
+      "history_text": "Last 5 letters shown (oldest to newest): T, X, B, D, S.",
+      "letter": "N",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_9": {
+      "trcode": "n3_conversation_9",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 9,
+      "history_text": "Last 5 letters shown (oldest to newest): X, B, D, S, N.",
+      "letter": "Y",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_10": {
+      "trcode": "n3_conversation_10",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 10,
+      "history_text": "Last 5 letters shown (oldest to newest): B, D, S, N, Y.",
+      "letter": "C",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_11": {
+      "trcode": "n3_conversation_11",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 11,
+      "history_text": "Last 5 letters shown (oldest to newest): D, S, N, Y, C.",
+      "letter": "X",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_12": {
+      "trcode": "n3_conversation_12",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 12,
+      "history_text": "Last 5 letters shown (oldest to newest): S, N, Y, C, X.",
+      "letter": "N",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_13": {
+      "trcode": "n3_conversation_13",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 13,
+      "history_text": "Last 5 letters shown (oldest to newest): N, Y, C, X, N.",
+      "letter": "C",
+      "corrAns": "match"
+    },
+    "n3_conversation_14": {
+      "trcode": "n3_conversation_14",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 14,
+      "history_text": "Last 5 letters shown (oldest to newest): Y, C, X, N, C.",
+      "letter": "B",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_15": {
+      "trcode": "n3_conversation_15",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 15,
+      "history_text": "Last 5 letters shown (oldest to newest): C, X, N, C, B.",
+      "letter": "N",
+      "corrAns": "match"
+    },
+    "n3_conversation_16": {
+      "trcode": "n3_conversation_16",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 16,
+      "history_text": "Last 5 letters shown (oldest to newest): X, N, C, B, N.",
+      "letter": "C",
+      "corrAns": "match"
+    },
+    "n3_conversation_17": {
+      "trcode": "n3_conversation_17",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 17,
+      "history_text": "Last 5 letters shown (oldest to newest): N, C, B, N, C.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_18": {
+      "trcode": "n3_conversation_18",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 18,
+      "history_text": "Last 5 letters shown (oldest to newest): C, B, N, C, R.",
+      "letter": "N",
+      "corrAns": "match"
+    },
+    "n3_conversation_19": {
+      "trcode": "n3_conversation_19",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 19,
+      "history_text": "Last 5 letters shown (oldest to newest): B, N, C, R, N.",
+      "letter": "H",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_20": {
+      "trcode": "n3_conversation_20",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 20,
+      "history_text": "Last 5 letters shown (oldest to newest): N, C, R, N, H.",
+      "letter": "L",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_21": {
+      "trcode": "n3_conversation_21",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 21,
+      "history_text": "Last 5 letters shown (oldest to newest): C, R, N, H, L.",
+      "letter": "J",
+      "corrAns": "no-match"
+    },
+    "n3_conversation_22": {
+      "trcode": "n3_conversation_22",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 22,
+      "history_text": "Last 5 letters shown (oldest to newest): R, N, H, L, J.",
+      "letter": "H",
+      "corrAns": "match"
+    },
+    "n3_conversation_23": {
+      "trcode": "n3_conversation_23",
+      "n": 3,
+      "memory_mode": "conversation",
+      "position": 23,
+      "history_text": "Last 5 letters shown (oldest to newest): N, H, L, J, H.",
+      "letter": "L",
+      "corrAns": "match"
+    },
+    "n3_summary_3": {
+      "trcode": "n3_summary_3",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 3,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P.",
+      "letter": "T",
+      "corrAns": "match"
+    },
+    "n3_summary_4": {
+      "trcode": "n3_summary_4",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 4,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T.",
+      "letter": "X",
+      "corrAns": "no-match"
+    },
+    "n3_summary_5": {
+      "trcode": "n3_summary_5",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 5,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T, X.",
+      "letter": "B",
+      "corrAns": "no-match"
+    },
+    "n3_summary_6": {
+      "trcode": "n3_summary_6",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 6,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T, X, B.",
+      "letter": "D",
+      "corrAns": "no-match"
+    },
+    "n3_summary_7": {
+      "trcode": "n3_summary_7",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 7,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T, X, B, D.",
+      "letter": "S",
+      "corrAns": "no-match"
+    },
+    "n3_summary_8": {
+      "trcode": "n3_summary_8",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 8,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T, X, B, D, S.",
+      "letter": "N",
+      "corrAns": "no-match"
+    },
+    "n3_summary_9": {
+      "trcode": "n3_summary_9",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 9,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T, X, B, D, S, N.",
+      "letter": "Y",
+      "corrAns": "no-match"
+    },
+    "n3_summary_10": {
+      "trcode": "n3_summary_10",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 10,
+      "history_text": "Letters shown so far (oldest to newest): T, W, P, T, X, B, D, S, N, Y.",
+      "letter": "C",
+      "corrAns": "no-match"
+    },
+    "n3_summary_11": {
+      "trcode": "n3_summary_11",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 11,
+      "history_text": "Summary of the 1 earlier letters (counts): Tx1. Most recent 10 letters (oldest to newest): W, P, T, X, B, D, S, N, Y, C.",
+      "letter": "X",
+      "corrAns": "no-match"
+    },
+    "n3_summary_12": {
+      "trcode": "n3_summary_12",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 12,
+      "history_text": "Summary of the 2 earlier letters (counts): Tx1, Wx1. Most recent 10 letters (oldest to newest): P, T, X, B, D, S, N, Y, C, X.",
+      "letter": "N",
+      "corrAns": "no-match"
+    },
+    "n3_summary_13": {
+      "trcode": "n3_summary_13",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 13,
+      "history_text": "Summary of the 3 earlier letters (counts): Px1, Tx1, Wx1. Most recent 10 letters (oldest to newest): T, X, B, D, S, N, Y, C, X, N.",
+      "letter": "C",
+      "corrAns": "match"
+    },
+    "n3_summary_14": {
+      "trcode": "n3_summary_14",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 14,
+      "history_text": "Summary of the 4 earlier letters (counts): Px1, Tx2, Wx1. Most recent 10 letters (oldest to newest): X, B, D, S, N, Y, C, X, N, C.",
+      "letter": "B",
+      "corrAns": "no-match"
+    },
+    "n3_summary_15": {
+      "trcode": "n3_summary_15",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 15,
+      "history_text": "Summary of the 5 earlier letters (counts): Px1, Tx2, Wx1, Xx1. Most recent 10 letters (oldest to newest): B, D, S, N, Y, C, X, N, C, B.",
+      "letter": "N",
+      "corrAns": "match"
+    },
+    "n3_summary_16": {
+      "trcode": "n3_summary_16",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 16,
+      "history_text": "Summary of the 6 earlier letters (counts): Bx1, Px1, Tx2, Wx1, Xx1. Most recent 10 letters (oldest to newest): D, S, N, Y, C, X, N, C, B, N.",
+      "letter": "C",
+      "corrAns": "match"
+    },
+    "n3_summary_17": {
+      "trcode": "n3_summary_17",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 17,
+      "history_text": "Summary of the 7 earlier letters (counts): Bx1, Dx1, Px1, Tx2, Wx1, Xx1. Most recent 10 letters (oldest to newest): S, N, Y, C, X, N, C, B, N, C.",
+      "letter": "R",
+      "corrAns": "no-match"
+    },
+    "n3_summary_18": {
+      "trcode": "n3_summary_18",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 18,
+      "history_text": "Summary of the 8 earlier letters (counts): Bx1, Dx1, Px1, Sx1, Tx2, Wx1, Xx1. Most recent 10 letters (oldest to newest): N, Y, C, X, N, C, B, N, C, R.",
+      "letter": "N",
+      "corrAns": "match"
+    },
+    "n3_summary_19": {
+      "trcode": "n3_summary_19",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 19,
+      "history_text": "Summary of the 9 earlier letters (counts): Bx1, Dx1, Nx1, Px1, Sx1, Tx2, Wx1, Xx1. Most recent 10 letters (oldest to newest): Y, C, X, N, C, B, N, C, R, N.",
+      "letter": "H",
+      "corrAns": "no-match"
+    },
+    "n3_summary_20": {
+      "trcode": "n3_summary_20",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 20,
+      "history_text": "Summary of the 10 earlier letters (counts): Bx1, Dx1, Nx1, Px1, Sx1, Tx2, Wx1, Xx1, Yx1. Most recent 10 letters (oldest to newest): C, X, N, C, B, N, C, R, N, H.",
+      "letter": "L",
+      "corrAns": "no-match"
+    },
+    "n3_summary_21": {
+      "trcode": "n3_summary_21",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 21,
+      "history_text": "Summary of the 11 earlier letters (counts): Bx1, Cx1, Dx1, Nx1, Px1, Sx1, Tx2, Wx1, Xx1, Yx1. Most recent 10 letters (oldest to newest): X, N, C, B, N, C, R, N, H, L.",
+      "letter": "J",
+      "corrAns": "no-match"
+    },
+    "n3_summary_22": {
+      "trcode": "n3_summary_22",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 22,
+      "history_text": "Summary of the 12 earlier letters (counts): Bx1, Cx1, Dx1, Nx1, Px1, Sx1, Tx2, Wx1, Xx2, Yx1. Most recent 10 letters (oldest to newest): N, C, B, N, C, R, N, H, L, J.",
+      "letter": "H",
+      "corrAns": "match"
+    },
+    "n3_summary_23": {
+      "trcode": "n3_summary_23",
+      "n": 3,
+      "memory_mode": "summary",
+      "position": 23,
+      "history_text": "Summary of the 13 earlier letters (counts): Bx1, Cx1, Dx1, Nx2, Px1, Sx1, Tx2, Wx1, Xx2, Yx1. Most recent 10 letters (oldest to newest): C, B, N, C, R, N, H, L, J, H.",
+      "letter": "L",
+      "corrAns": "match"
+    }
+  }
+}
