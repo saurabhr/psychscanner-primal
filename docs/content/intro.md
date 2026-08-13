@@ -9,7 +9,7 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 
 ## What's included
 
-- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, parsers, `task_library`, `SessionTunnel`, `SimulationModel`.
+- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `SessionTunnel`, `SimulationModel`.
 - Multi-provider model calling via LangChain (OpenAI, Anthropic, Groq, Mistral, Google, Ollama, HuggingFace, etc.).
 - Only the feedback-scored task cards: Reality Monitoring (`rm_*`) and paired-associate learning (`pal50`).
 - `CustomAgent`/`ScanningAgent` adapter protocol, for plugging in your own agent.
@@ -34,5 +34,7 @@ uv pip install -e .
 ## Next steps
 
 1. See **Quickstart** for a live, runnable example against the built-in `mock-llm` family.
-2. See **Contributing a task** if you want to add a new cognitive task and release it as a Hub environment.
-3. See **Reality Monitoring environment** for the one task already shipped on the Hub.
+2. See **Write and run your own task** to author a task card from scratch and point it at a real model.
+3. See **Conditional Next Trial** to branch the trial sequence adaptively based on the model's response.
+4. See **Contributing a task** if you want to add a new cognitive task and release it as a Hub environment.
+5. See **Reality Monitoring environment** for the one task already shipped on the Hub.

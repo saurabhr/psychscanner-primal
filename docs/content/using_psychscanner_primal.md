@@ -20,7 +20,7 @@ You have a new cognitive task in mind and want anyone to be able to run `prime e
 
 `psychscanner-primal` is a **dev-time tool** here, not a runtime dependency of what you publish. The workflow:
 
-1. Author your task as a task card (JSON stimuli/trials) and dry-run it locally against the free `mock-llm` family using `ExpCard`/`ScannerModel` — see **Quickstart**. This is the fast iteration loop, no `verifiers`, no Hub, no cost.
+1. Author your task as a task card (JSON stimuli/trials) and dry-run it locally against the free `mock-llm` family using `ExpCard`/`ScannerModel` — see **Quickstart** and **Write and run your own task**. This is the fast iteration loop, no `verifiers`, no Hub, no cost. If the trial sequence itself should depend on the model's response (retry, adaptive difficulty), see **Conditional Next Trial**.
 2. Once the task card and scoring logic are right, port them into a `verifiers`-based environment module (`environments/<task_name>/<task_name>.py` with a `load_environment()` function) — see **Contributing a task** for the exact folder shape, and **Hub environment tutorial** for a worked example.
 3. `prime env push` to publish — see **Prime Intellect Environments Hub**.
 
