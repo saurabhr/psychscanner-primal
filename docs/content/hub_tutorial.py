@@ -19,7 +19,7 @@ def _(mo):
 
         The **Prime Intellect Environments Hub** page covers the `prime`
         commands. This page is the hands-on complement: it runs the actual
-        `psychscanner-rm-encoding` environment module, end to end, entirely
+        `psychscanner-nback` environment module, end to end, entirely
         locally — no `prime` account, no API key, no cost. This is exactly
         what `prime env push` uploads and what `prime eval run` executes on
         the Hub; here you can see it work before publishing anything.
@@ -34,7 +34,7 @@ def _(mo):
         r"""
         ## 1. Load the pieces `load_environment()` builds
 
-        `psychscanner_rm_encoding.load_environment()` wraps a dataset and a
+        `psychscanner_nback.load_environment()` wraps a dataset and a
         parser in a `verifiers.SingleTurnEnv` — the object `prime eval run`
         actually drives. That wrapper installs its own SIGINT/SIGTERM
         handlers on construction, which only works on a notebook kernel's
@@ -53,13 +53,13 @@ def _():
     import sys
     from pathlib import Path
 
-    sys.path.insert(0, str(Path("../environments/psychscanner_rm_encoding").resolve()))
-    import psychscanner_rm_encoding as rm_encoding
+    sys.path.insert(0, str(Path("../environments/psychscanner_nback").resolve()))
+    import psychscanner_nback as nback
     import verifiers as vf
 
-    dataset = rm_encoding._build_dataset()
-    parser = vf.XMLParser(fields=["word_2"], answer_field="word_2")
-    return dataset, parser, rm_encoding
+    dataset = nback._build_dataset()
+    parser = vf.XMLParser(fields=["answer"], answer_field="answer")
+    return dataset, parser, nback
 
 
 @app.cell(hide_code=True)
@@ -67,7 +67,7 @@ def _(dataset, mo):
     mo.md(
         f"Built a dataset with **{len(dataset)}** rows — the same "
         f"`Dataset` object `load_environment()` would hand to "
-        f"`SingleTurnEnv`, straight from `rm_singleturn_demo.json`."
+        f"`SingleTurnEnv`, straight from `nback_demo.json`."
     )
     return
 
@@ -88,10 +88,12 @@ def _(dataset):
 def _(mo):
     mo.md(
         r"""
-        Each row is one trial. `perceived` trials show a real `word_2` the
-        model must echo back exactly; `imagined` trials blank it out and the
-        model has to invent a novel word. `answer` carries the ground truth
-        the rubric checks against — it's never shown to the model.
+        Each row is one trial: a letter sequence position, tagged with its
+        n-back level (`n`) and history condition (`memory_mode`, either
+        `conversation` — a raw trailing window — or `summary` — older
+        letters folded into counts). `answer` carries the ground-truth
+        `match` / `no-match` judgment the rubric checks against — it's
+        never shown to the model.
         """
     )
     return
@@ -104,49 +106,45 @@ def _(mo):
 
 
 @app.cell
-def _(dataset, parser, rm_encoding):
-    # Simulating what a model's raw completion would look like, for both
-    # trial types, then scoring it exactly the way the Hub rubric does.
-    import json
+def _(dataset, parser, nback):
+    # Simulating what a model's raw completion would look like for one
+    # trial, then scoring it exactly the way the Hub rubric does.
+    match_row = next(r for r in dataset if r["answer"] == "match")
+    nomatch_row = next(r for r in dataset if r["answer"] == "no-match")
 
-    perceived_row = next(r for r in dataset if '"trial_type": "perceived"' in r["answer"])
-    imagined_row = next(r for r in dataset if '"trial_type": "imagined"' in r["answer"])
+    match_completion = "<answer>match</answer>"
+    nomatch_completion = "<answer>no-match</answer>"
 
-    perceived_completion = f'<word_2>{json.loads(perceived_row["answer"])["word_2"]}</word_2>'
-    imagined_completion = "<word_2>gritty</word_2>"
-
-    perceived_score = rm_encoding.encoding_correct(perceived_completion, perceived_row["answer"], parser)
-    imagined_score = rm_encoding.encoding_correct(imagined_completion, imagined_row["answer"], parser)
+    match_score = nback.nback_correct(match_completion, match_row["answer"], parser)
+    nomatch_score = nback.nback_correct(nomatch_completion, nomatch_row["answer"], parser)
     return (
-        imagined_completion,
-        imagined_row,
-        imagined_score,
-        perceived_completion,
-        perceived_row,
-        perceived_score,
+        match_completion,
+        match_row,
+        match_score,
+        nomatch_completion,
+        nomatch_row,
+        nomatch_score,
     )
 
 
 @app.cell(hide_code=True)
 def _(
-    imagined_completion,
-    imagined_score,
+    match_completion,
+    match_score,
     mo,
-    perceived_completion,
-    perceived_score,
+    nomatch_completion,
+    nomatch_score,
 ):
     mo.md(
         f"""
-        | Trial type | Completion | `encoding_correct` |
+        | Ground truth | Completion | `nback_correct` |
         |---|---|---|
-        | perceived | `{perceived_completion}` | **{perceived_score}** |
-        | imagined | `{imagined_completion}` | **{imagined_score}** |
+        | match | `{match_completion}` | **{match_score}** |
+        | no-match | `{nomatch_completion}` | **{nomatch_score}** |
 
-        Both score `1.0` — the perceived completion echoes `word_2` exactly,
-        and the imagined completion is a single alphabetic token that isn't
-        `word_1`. Try changing `imagined_completion` above to `word_1`'s own
-        value, or to something with a space in it, and re-run — the score
-        drops to `0.0`, matching the Scope rules on the environment page.
+        Both score `1.0` — the completion's judgment matches the trial's
+        ground truth. Try swapping `match_completion` for
+        `<answer>no-match</answer>` and re-run — the score drops to `0.0`.
         """
     )
     return
@@ -159,7 +157,7 @@ def _(mo):
         ## 4. Ship it
 
         Everything above ran from the plain Python module in
-        `environments/psychscanner_rm_encoding/`. Once your own environment
+        `environments/psychscanner_nback/`. Once your own environment
         (see **Contributing a task**) does the same locally, publishing it
         is just:
 

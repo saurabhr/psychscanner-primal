@@ -6,7 +6,7 @@ If you've never heard of this, you're the audience for this page. Everything els
 
 The [Environments Hub](https://app.primeintellect.ai/dashboard/environments) is a public catalog of packaged tasks for evaluating and training LLMs — reinforcement learning environments and agent evals, in one place. Someone packages a task (dataset + scoring rule) as a small Python module, publishes it to the Hub, and from then on anyone can run any model against it with one command, without reading that person's code.
 
-Under the hood, every Hub environment is built on [`verifiers`](https://github.com/PrimeIntellect-ai/verifiers) — a small framework for exactly this: a dataset, a parser for the model's output, and a rubric (reward function) that scores it. That's what `environments/psychscanner_rm_encoding/psychscanner_rm_encoding.py` in this repo is — a `verifiers` environment, ready to push to the Hub.
+Under the hood, every Hub environment is built on [`verifiers`](https://github.com/PrimeIntellect-ai/verifiers) — a small framework for exactly this: a dataset, a parser for the model's output, and a rubric (reward function) that scores it. That's what `environments/psychscanner_nback/psychscanner_nback.py` in this repo is — a `verifiers` environment, ready to push to the Hub.
 
 This is the reason `psychscanner-primal` exists as a separate, slim package in the first place (see the [Home](index.md) page): it's the minimal runtime a Hub environment needs to import, stripped of everything (surveys, agent architectures, interpretability backends) that doesn't carry a reward signal.
 
@@ -27,10 +27,10 @@ prime login
 
 ## Running an eval against an existing environment
 
-This is the common case: someone else already published an environment (like this repo's `psychscanner-rm-encoding`), and you want to test a model against it.
+This is the common case: someone else already published an environment (like this repo's `psychscanner-nback`), and you want to test a model against it.
 
 ```bash
-prime eval run psychscanner-rm-encoding -m openai/gpt-4.1-mini -n 8 -r 3
+prime eval run psychscanner-nback -m openai/gpt-4.1-mini -n 8 -r 3
 ```
 
 - `-m / --model` — which model to test (default `openai/gpt-4.1-mini`)
@@ -43,15 +43,15 @@ prime eval run psychscanner-rm-encoding -m openai/gpt-4.1-mini -n 8 -r 3
 To use your own model provider's key instead of Prime's billing, point at the provider directly:
 
 ```bash
-prime eval run psychscanner-rm-encoding \
+prime eval run psychscanner-nback \
   --api-base-url https://api.openai.com/v1 --api-key-var OPENAI_API_KEY \
   -m gpt-4.1-mini -n 8 -r 3
 ```
 
-To run fully locally against Ollama (no Hub, no billing at all) — this is what `environments/psychscanner_rm_encoding/README.md`'s own Quickstart documents:
+To run fully locally against Ollama (no Hub, no billing at all) — this is what `environments/psychscanner_nback/README.md`'s own Quickstart documents:
 
 ```bash
-vf-eval psychscanner_rm_encoding --provider local \
+vf-eval psychscanner_nback --provider local \
   --api-base-url http://localhost:11434/v1 --api-key-var OLLAMA_API_KEY \
   -m smollm2:360m-instruct-fp16 -n 8 -r 1
 ```

@@ -1,6 +1,6 @@
 # Contributing a task
 
-A contribution is a self-contained folder under `environments/<task_name>/` with everything needed to run and score the task — modeled on the existing [`environments/psychscanner_rm_encoding/`](https://github.com/saurabhr/psychscanner-primal/tree/main/environments/psychscanner_rm_encoding), which is the reference example to copy from:
+A contribution is a self-contained folder under `environments/<task_name>/` with everything needed to run and score the task — modeled on the existing [`environments/psychscanner_nback/`](https://github.com/saurabhr/psychscanner-primal/tree/main/environments/psychscanner_nback), which is the reference example to copy from:
 
 ```
 environments/<task_name>/
@@ -10,7 +10,7 @@ environments/<task_name>/
 └── README.md            # Overview, Datasets, Task, Quickstart, Metrics, Citation sections
 ```
 
-There's no requirement to reuse the Reality Monitoring or PAL50 scoring logic — a contribution can define its own trial data, its own parser, and its own correct/incorrect rule in `<task_name>.py`, as long as it's an honest, documented reward signal (see the "Scope" section of the rm_encoding README for how to be upfront about what a proxy metric does and doesn't cover).
+There's no requirement to reuse the Reality Monitoring or PAL50 scoring logic — a contribution can define its own trial data, its own parser, and its own correct/incorrect rule in `<task_name>.py`, as long as it's an honest, documented reward signal (see the "Scope" section of the psychscanner_nback README for how to be upfront about what a proxy metric does and doesn't cover).
 
 Not the same thing as [`task_library()`](https://github.com/saurabhr/psychscanner-primal/blob/main/src/psychscanner/task_library.py): that's a runtime lookup for a bare task-card JSON (stimuli only), used from Python code via the `psychscanner` API. This workflow is for a full packaged, scored environment meant to ship on the Hub.
 

@@ -4,12 +4,12 @@ Four different things bring people to this repo. Pick the one that matches what 
 
 ## 1. Just run an existing Hub environment
 
-You don't want to write any code — you want to test a model against a task that's already published, like `psychscanner-rm-encoding`.
+You don't want to write any code — you want to test a model against a task that's already published, like `psychscanner-nback`.
 
 You don't need `psychscanner-primal` at all for this. Install the `prime` CLI and run:
 
 ```bash
-prime eval run psychscanner-rm-encoding -m openai/gpt-4.1-mini -n 8 -r 3
+prime eval run psychscanner-nback -m openai/gpt-4.1-mini -n 8 -r 3
 ```
 
 See **Prime Intellect Environments Hub** for the full command reference, and **Hub environment tutorial** to see what that environment actually does before you spend money running it.
@@ -24,7 +24,7 @@ You have a new cognitive task in mind and want anyone to be able to run `prime e
 2. Once the task card and scoring logic are right, port them into a `verifiers`-based environment module (`environments/<task_name>/<task_name>.py` with a `load_environment()` function) — see **Contributing a task** for the exact folder shape, and **Hub environment tutorial** for a worked example.
 3. `prime env push` to publish — see **Prime Intellect Environments Hub**.
 
-One accuracy note: your published environment module does **not** have to `import psychscanner` at runtime. The shipped `psychscanner_rm_encoding.py` example doesn't — it only depends on `verifiers` and `datasets`, reimplementing its own parsing/scoring in plain Python. You *can* import `psychscanner.parsers` or other pieces from this package in your environment module if you want to reuse them, but then you must add `psychscanner-primal` to your environment's own `pyproject.toml` dependencies (as a git dependency, since it isn't on PyPI — see §4).
+One accuracy note: your published environment module does **not** have to `import psychscanner` at runtime. The shipped `psychscanner_nback.py` example doesn't — it only depends on `verifiers` and `datasets`, reimplementing its own parsing/scoring in plain Python. You *can* import `psychscanner.parsers` or other pieces from this package in your environment module if you want to reuse them, but then you must add `psychscanner-primal` to your environment's own `pyproject.toml` dependencies (as a git dependency, since it isn't on PyPI — see §4).
 
 ## 3. Contribute a task card to the task library
 
