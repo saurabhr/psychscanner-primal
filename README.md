@@ -12,6 +12,14 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 
 > For the full research package — psychometric surveys (BFI-44, VVIQ-16), the LangGraph agent architectures, multimodal/interpretability backends (nnsight, nnterp, VLM), notebooks, and full docs — see [psychscanner](https://github.com/saurabhr/psychscanner).
 
+<p>
+  <a href="https://github.com/saurabhr/psyscan-library-primal"><img src="docs/images/logo_library_primal.png" alt="psyscan-library-primal" height="28"></a>
+  &nbsp;Vetted task/experiment cards for this package live in <a href="https://github.com/saurabhr/psyscan-library-primal"><code>psyscan-library-primal</code></a>.
+</p>
+<p>
+  Published Docker image: <a href="https://github.com/saurabhr/psychscanner-primal/pkgs/container/psychscanner-primal"><img src="docs/images/docker-ps-primal.png" alt="ps-primal" height="22"></a>
+</p>
+
 ## What's different from psychscanner
 
 **Included:**
