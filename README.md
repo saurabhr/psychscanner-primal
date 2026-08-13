@@ -73,6 +73,8 @@ df = to_csv(scanner, path=card.proj_dir)
 
 Swap `model`/`family` for a real provider (see table below) to run against an actual LLM.
 
+The install also adds a `psychscanner-primal` console command covering the same options (`psychscanner-primal --help`) — see the [CLI reference](https://saurabhr.github.io/psychscanner-primal/cli_reference/) for the full flag list.
+
 ## Supported Providers
 
 Only `ollama` ships out of the box (`langchain-ollama` is a base dependency). Every other family needs its own LangChain integration package too, e.g. `uv pip install langchain-openai` for `openai` — see [LangChain's provider list](https://docs.langchain.com/oss/python/integrations/providers).

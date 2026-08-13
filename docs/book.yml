@@ -52,6 +52,8 @@ toc:
   - file: content/prime_intellect_hub.md
     title: Prime Intellect Environments Hub
   - file: content/quickstart.py
+  - file: content/cli_reference.md
+    title: CLI reference
   - file: content/write_your_own_task.md
     title: Write and run your own task
   - file: content/conditional_next_trial.md

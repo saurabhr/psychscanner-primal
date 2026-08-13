@@ -59,4 +59,4 @@ uv pip install -e ".[docs]"        # marimo-book, verifiers, datasets — to bui
 uv pip install -e ".[dev]"         # tests + multimodal together
 ```
 
-This also installs a `psychscanner-primal` console command (`[project.scripts]` in `pyproject.toml`, wired to `psychscanner.cli:cli`) and, since it's editable, any change you make to `src/psychscanner/` is live immediately — no reinstall needed. Run the test suite with `pytest tests/` from the repo root.
+This also installs a `psychscanner-primal` console command (`[project.scripts]` in `pyproject.toml`, wired to `psychscanner.cli:cli`) — see **CLI reference** for every flag — and, since it's editable, any change you make to `src/psychscanner/` is live immediately — no reinstall needed. Run the test suite with `pytest tests/` from the repo root.
