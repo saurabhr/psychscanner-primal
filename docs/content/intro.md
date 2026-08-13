@@ -1,5 +1,7 @@
 # psychscanner-primal
 
+![logo](../logo.jpeg)
+
 Slim, Hub-optimized distribution of [psychscanner](https://github.com/saurabhr/psychscanner) — a framework for running psychological experiments with large language models.
 
 This package exists as a lightweight dependency for RL/eval tooling such as the [Prime Intellect Environments Hub](https://docs.primeintellect.ai/tutorials-environments/environments): it carries only the tasks that have a real per-trial correct/incorrect signal, so they can be scored as a reward, plus the runtime needed to execute them. It does **not** itself register anything with Prime Intellect or depend on `verifiers` — it's the stable, minimal thing a Hub environment package would import.
