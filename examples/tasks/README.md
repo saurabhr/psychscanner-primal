@@ -13,6 +13,7 @@ psychscanner-primal only ships tasks that have a real per-trial correct/incorrec
 - `rm_dynamic_demo.json` - Relational-memory task, dynamic encoding/test trials
 - `rm_episodic_demo.json` - Relational-memory task, episodic conversation (no feedback)
 - `rm_episodic_fb_demo.json` - Relational-memory task, episodic conversation with feedback
+- `introspection_weights_demo.json` - Multi-attribute 2AFC choice task (10 simulated agents x 6 trials), adapted from Plunkett et al. (2025)'s LLM self-interpretability paradigm; see [psychscanner's `07_introspective_selfreport` demo](https://github.com/saurabhr/psychscanner/tree/main/examples/demonstration_suite/07_introspective_selfreport). Each trial's `corrAns` is the option the simulated agent's (randomly-generated, in-context-instilled) attribute weights actually favor. The introspective self-report half of that demo has no scalar ground truth to score, so it's intentionally not included here.
 
 ## Structure
 
