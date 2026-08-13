@@ -9,6 +9,8 @@ authors:
 repo: https://github.com/saurabhr/psychscanner-primal
 branch: main
 
+logo: logo.jpeg
+
 # Material for MkDocs palette. Any hex color works; uncomment to customise.
 # theme:
 #   palette:
