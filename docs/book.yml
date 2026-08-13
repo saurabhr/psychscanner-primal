@@ -62,3 +62,5 @@ toc:
     title: Contributing a task
   - file: content/hub_environment.md
     title: Reality Monitoring environment
+  - url: https://psychscanner.readthedocs.io/en/latest/
+    title: Read about psychscanner
