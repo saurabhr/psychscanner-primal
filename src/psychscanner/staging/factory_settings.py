@@ -7,6 +7,7 @@ It includes:
 
 from __future__ import annotations
 
+import copy
 from typing import Optional
 
 from pydantic import BaseModel, Field
@@ -72,7 +73,7 @@ DEFAULT_FACTORY = {
 
 """
 
-PSCAN_OLLAMA_DEFAULT_FACTORY = {**DEFAULT_FACTORY}
+PSCAN_OLLAMA_DEFAULT_FACTORY = copy.deepcopy(DEFAULT_FACTORY)
 PSCAN_OLLAMA_DEFAULT_FACTORY["EXP_CARD_INIT"]["familyname"] = "ollama"
 PSCAN_OLLAMA_DEFAULT_FACTORY["EXP_CARD_INIT"]["modelname"] = "llama2"
 
