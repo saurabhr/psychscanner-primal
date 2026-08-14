@@ -1,6 +1,6 @@
 # CLI reference
 
-Installing the package (see **Install as a developer** in [Using psychscanner-primal](using_psychscanner_primal.md)) wires up a `psychscanner-primal` console command, backed by `psychscanner.cli:cli` (`src/psychscanner/cli.py`). It builds an `ExpCardInit`/`ExpCard`, runs a `ScannerModel`, and writes results with `to_csv` — the same objects used in the [Quickstart](quickstart.py).
+Installing the package (see **Install as a developer** in [Using psychscanner-primal](using_psychscanner_primal.md)) wires up a `psychscanner-primal` console command, backed by `psychscanner.cli:cli` (`src/psychscanner/cli.py`). It builds an `ExpCardInit`/`ExpCard`, runs a `ScannerModel`, and writes results with `to_csv` — the same objects used in the [Quickstart](quickstart.md).
 
 ```bash
 psychscanner-primal --help
@@ -44,4 +44,4 @@ psychscanner-primal \
   -pd ./results
 ```
 
-Runs the same task as the [Quickstart](quickstart.py), from the shell instead of Python.
+Runs the same task as the [Quickstart](quickstart.md), from the shell instead of Python.
