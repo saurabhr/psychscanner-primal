@@ -18,7 +18,7 @@ import sys
 import tomllib
 from pathlib import Path
 
-from task_ledger import _load_ledger, find_duplicates
+from task_ledger import REPO_ROOT, _load_ledger, find_duplicates
 
 REQUIRED_README_SECTIONS = ["overview", "datasets", "task", "quickstart", "metrics", "citation"]
 
@@ -100,7 +100,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         lines = [f"PASS: {folder} looks ready for a PR."]
 
-    report_dir = Path(".contrib/validate-out")
+    report_dir = REPO_ROOT / ".contrib/validate-out"
     report_dir.mkdir(parents=True, exist_ok=True)
     report_path = report_dir / f"{folder.name}.log"
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
