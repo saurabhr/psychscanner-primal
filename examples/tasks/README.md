@@ -6,13 +6,21 @@ psychscanner-primal only ships tasks that have a real per-trial correct/incorrec
 
 ## Files
 
-- `nback_demo.json` - N-back working-memory task (n=1,2,3 routines), default task card — run with `memory="Convo"` (`memory_k=5` for conversation memory, or add `summary_k=10` for summary memory)
 - `pal50.json` - Paired-associate learning task (50 word pairs, study + test phases)
 - `rm_singleturn_demo.json` - Relational-memory task, single-turn trial
 - `rm_trialchain_demo.json` - Relational-memory task, chained trials
 - `rm_dynamic_demo.json` - Relational-memory task, dynamic encoding/test trials
 - `rm_episodic_demo.json` - Relational-memory task, episodic conversation (no feedback)
 - `rm_episodic_fb_demo.json` - Relational-memory task, episodic conversation with feedback
+
+N-back working-memory task: use
+[`environments/psychscanner_nback/nback_demo.json`](../../environments/psychscanner_nback/nback_demo.json)
+instead of adding one here — it's the real, working card (n=1,2,3, pre-baked
+history text for `SingleTurnEnv`'s Hub-environment scoring, see that
+environment's own README for the schema). A `nback_demo.json` used to live
+in this folder too, but it used a different, stale schema that no code in
+`src/psychscanner` reads and couldn't actually run; removed rather than left
+as a trap.
 
 ## Structure
 
