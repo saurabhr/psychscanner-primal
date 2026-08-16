@@ -9,6 +9,7 @@ on:
       - "examples/**"
       - "src/**"
       - "scripts/inject_new_tab_links.py"
+      - "scripts/force_light_default.py"
       - "CONTRIBUTING.md"
       - "pyproject.toml"
       - ".github/workflows/deploy-docs.yml"
@@ -43,6 +44,9 @@ jobs:
 
       - name: Open every link in a new tab
         run: python3 scripts/inject_new_tab_links.py docs/_site
+
+      - name: Default to light mode
+        run: python3 scripts/force_light_default.py docs/_site
 
       - uses: actions/upload-pages-artifact@v3
         with:
