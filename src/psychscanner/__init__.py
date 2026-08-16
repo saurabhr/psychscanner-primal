@@ -25,6 +25,7 @@ from .simulation_model.simulation_model import (
 from .templates.tasks.get_task_template import get_task_template
 from .task_library import task_library, list_task_library
 from .library_download import download_lib
+from .run_card import run_card
 from .feedback import FeedbackBase, NextTrialBase
 from .agents import CustomAgent, ScanningAgent
 
@@ -48,6 +49,7 @@ __all__ = [
     "task_library",
     "list_task_library",
     "download_lib",
+    "run_card",
     "FeedbackBase",
     "NextTrialBase",
     "CustomAgent",

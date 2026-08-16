@@ -52,6 +52,18 @@ Unlike full `psychscanner`'s `download_lib()`, this distro has no `experiment_li
 
 By default `download_lib()` checks that `library=` (default `"primal"`) matches the package actually installed in this environment — cards aren't portable between `psychscanner` and `psychscanner-primal` — and raises rather than handing back cards that won't run here. Pass `library="psychscanner"` or `library="all"` to opt into fetching the other distro's cards anyway (inspecting/porting, or CI that covers both). See the docstring in [`src/psychscanner/library_download.py`](https://github.com/saurabhr/psychscanner-primal/blob/main/src/psychscanner/library_download.py) for the full parameter reference (`dest`, `ref`).
 
+### Running a fetched card in one call (`run_card`)
+
+Fetching a card is only half the work — running it still means building an `ExpCardInit`, wrapping it in `ExpCard`, and calling `ScannerModel(...).run()` by hand. `run_card()` chains `task_library()` + all three of those into one call:
+
+```python
+from psychscanner import run_card
+
+results = run_card("rm_singleturn_demo", dirs="examples/tasks")
+```
+
+Equivalent to the `ExpCardInit`/`ExpCard`/`ScannerModel` chain shown in **Quickstart**. `run_card`'s keyword defaults (`model`, `family`, `memory`, `cogtype`, `nsim`) match `ExpCardInit`'s own defaults — override any of them, or pass through any other `ExpCardInit` field (`parser`, `parameters`, ...) as extra keyword arguments. `proj_dir` defaults to `ExpCardInit`'s own default (`~/psychscanner`) when omitted. Reach for the longer form instead when you need the `ExpCard`/`ScannerModel` object itself, e.g. to call `to_csv(scanner, ...)` afterward. Full parameter reference in the docstring: [`src/psychscanner/run_card.py`](https://github.com/saurabhr/psychscanner-primal/blob/main/src/psychscanner/run_card.py).
+
 ## 4. Install as a developer
 
 `psychscanner-primal` isn't on PyPI — the only supported install path is an editable install from a clone:
