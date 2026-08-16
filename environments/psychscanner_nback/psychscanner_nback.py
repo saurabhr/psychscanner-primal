@@ -3,7 +3,7 @@
 Sequential letter n-back task: on each trial the model judges whether the
 current letter matches the one shown `n` positions back. Ships three memory
 loads (n=1,2,3) crossed with two of psychscanner's own history-quantization
-conditions (see ../../docs guides/memory_types.md in psychscanner-primal):
+conditions (see docs/guides/memory_types.md in the main psychscanner repo):
 
 - conversation: raw trailing window of the last `memory_k=5` letters.
 - summary: everything older than `summary_k=10` letters folded into counts,

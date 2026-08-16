@@ -11,7 +11,7 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 
 ## What's included
 
-- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `SessionTunnel`, `SimulationModel`.
+- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `download_lib`, `SessionTunnel`, `SimulationModel`.
 - Multi-provider model calling via LangChain (OpenAI, Anthropic, Groq, Mistral, Google, Ollama, HuggingFace, etc.).
 - Only the feedback-scored task cards: Reality Monitoring (`rm_*`) and paired-associate learning (`pal50`).
 - `CustomAgent`/`ScanningAgent` adapter protocol, for plugging in your own agent.

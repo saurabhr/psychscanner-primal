@@ -37,6 +37,21 @@ This is a **different, smaller thing** than publishing to the Hub, and it has no
 
 To contribute a task card for others to reuse this way, there's no PR, no validator, no ledger — you just drop `<your_task_name>.json` into a `demonstrations/` folder (your own, or one shared with a team via `PSYCHSCANNER_TASK_LIBRARY_DIRS`), and it's immediately fetchable by that filename. This is purely about sharing raw task data for local/programmatic use — it carries no reward signal or Hub packaging on its own. If you want the task scored and runnable by the wider world via `prime eval run`, that's §2, not this.
 
+### Fetching the vetted card index (`download_lib`)
+
+The workflow above assumes you already have a directory of cards on disk (a checkout of this repo, or your own project's `tasks/`). For the separate, versioned index of vetted cards — [psyscan-library](https://github.com/saurabhr/psyscan-library) — `download_lib()` clones/updates a checkout for you and hands back a path ready to pass to `task_library`'s `dirs=`:
+
+```python
+from psychscanner import download_lib, task_library
+
+paths = download_lib()  # library="primal" (this package)
+card = task_library("rm_singleturn_demo", dirs=paths["tasks"])
+```
+
+Unlike full `psychscanner`'s `download_lib()`, this distro has no `experiment_library` — there's no `kind=` parameter here, it only ever hands back `{"tasks": Path}`.
+
+By default `download_lib()` checks that `library=` (default `"primal"`) matches the package actually installed in this environment — cards aren't portable between `psychscanner` and `psychscanner-primal` — and raises rather than handing back cards that won't run here. Pass `library="psychscanner"` or `library="all"` to opt into fetching the other distro's cards anyway (inspecting/porting, or CI that covers both). See the docstring in [`src/psychscanner/library_download.py`](https://github.com/saurabhr/psychscanner-primal/blob/main/src/psychscanner/library_download.py) for the full parameter reference (`dest`, `ref`).
+
 ## 4. Install as a developer
 
 `psychscanner-primal` isn't on PyPI — the only supported install path is an editable install from a clone:

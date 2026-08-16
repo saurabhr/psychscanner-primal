@@ -15,12 +15,14 @@ There's no requirement to reuse the Reality Monitoring or PAL50 scoring logic �
 Not the same thing as [`task_library()`](https://github.com/saurabhr/psychscanner-primal/blob/main/src/psychscanner/task_library.py): that's a runtime lookup for a bare task-card JSON (stimuli only), used from Python code via the `psychscanner` API. This workflow is for a full packaged, scored environment meant to ship on the Hub.
 
 **Contributing a bare task or experiment card (no Hub packaging)?** That now goes
-to [`psyscan-library-primal`](https://github.com/saurabhr/psyscan-library-primal),
-the public, versioned index of vetted cards for this package, not a PR against
-`examples/tasks/` in this repo. It runs the same kind of validation described
-below (structure, dedup, and — the difference — it actually executes your card
-against the mock LLM before merging), just in its own repo. This `environments/`
-workflow is unchanged and still the right place for a full Hub-ready package.
+to the `tasks/primal/` subfolder of [`psyscan-library`](https://github.com/saurabhr/psyscan-library),
+the public, versioned index of vetted cards (shared across the `psychscanner` and
+`psychscanner-primal` distros, kept in separate `tasks/<distro>/` subfolders), not
+a PR against `examples/tasks/` in this repo. It runs the same kind of validation
+described below (structure, dedup, and — the difference — it actually executes
+your card against the mock LLM before merging), just in its own repo. This
+`environments/` workflow is unchanged and still the right place for a full
+Hub-ready package.
 
 ## Build it as a draft first
 

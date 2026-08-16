@@ -55,11 +55,12 @@ results = scanner.run()
 ## Contributing new cards
 
 New task and experiment cards no longer go through a PR against this folder.
-Submit them to [`psyscan-library-primal`](https://github.com/saurabhr/psyscan-library-primal)
-instead — the public, versioned index of vetted cards for psychscanner-primal.
-Every submission there is validated structurally, checked for duplicates, and
-actually run end-to-end against the mock LLM before being merged. See that
-repo's `CONTRIBUTING.md` for the steps.
+Submit them to the `tasks/primal/` subfolder of
+[`psyscan-library`](https://github.com/saurabhr/psyscan-library) instead — the
+public, versioned index of vetted cards, shared across the `psychscanner` and
+`psychscanner-primal` distros. Every submission there is validated
+structurally, checked for duplicates, and actually run end-to-end against the
+mock LLM before being merged. See that repo's `CONTRIBUTING.md` for the steps.
 
 This is separate from packaging a task for the Prime Intellect Hub
 (`environments/<name>/`, see the root [`CONTRIBUTING.md`](../../CONTRIBUTING.md))

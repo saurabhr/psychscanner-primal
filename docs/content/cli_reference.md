@@ -21,7 +21,7 @@ If `-pers`/`--persona_files` is omitted, the run defaults to a single no-persona
 | `-t`, `--task_file` | path | — | Task file to use. |
 | `-tc`, `--task_context` | `True` \| `False` \| unset | — | Task context to use. |
 | `-tus`, `--tunnel_status` | `0` \| `1` | `0` | Inactive (`0`) or active (`1`, recommended for the final run after testing, to save space) — resumes from the last saved iteration under wall-time limits. |
-| `-tuk`, `--tunnel_k` | int | `-1` | How many trials between saves. `0` saves once, after all trials. Use with care. |
+| `-tuk`, `--tunnel_k` | int | `-1` | Not currently implemented (accepted for forward-compatibility only; a non-default value logs a warning). Data is saved once per simulated participant regardless of this value. |
 | `-projname`, `--projectname` | text | `DEFAULTPROJ` | Project name, used when saving experiment data. |
 | `-tg`, `--tags` | text list | `[]` | Tags for added information on the experiment card, used when saving data. |
 | `-pa`, `--parser` | text | `0` | Parser callable name, if not `0` — must be defined in `staging`. |

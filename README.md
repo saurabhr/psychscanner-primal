@@ -13,8 +13,8 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 > For the full research package — psychometric surveys (BFI-44, VVIQ-16), the LangGraph agent architectures, multimodal/interpretability backends (nnsight, nnterp, VLM), notebooks, and full docs — see [psychscanner](https://github.com/saurabhr/psychscanner).
 
 <p>
-  <a href="https://github.com/saurabhr/psyscan-library-primal"><img src="docs/images/logo_library_primal.png" alt="psyscan-library-primal" height="28"></a>
-  &nbsp;Vetted task/experiment cards for this package live in <a href="https://github.com/saurabhr/psyscan-library-primal"><code>psyscan-library-primal</code></a>.
+  <a href="https://github.com/saurabhr/psyscan-library"><img src="docs/images/logo_library_primal.png" alt="psyscan-library" height="28"></a>
+  &nbsp;Vetted task cards for this package live in the <code>tasks/primal/</code> subfolder of <a href="https://github.com/saurabhr/psyscan-library"><code>psyscan-library</code></a>.
 </p>
 <p>
   Published Docker image: <a href="https://github.com/saurabhr/psychscanner-primal/pkgs/container/psychscanner-primal"><img src="docs/images/docker-ps-primal.png" alt="ps-primal" height="22"></a>
@@ -23,7 +23,7 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 ## What's different from psychscanner
 
 **Included:**
-- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `SessionTunnel`, `SimulationModel`.
+- Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `download_lib`, `SessionTunnel`, `SimulationModel`.
 - Multi-provider model calling via LangChain (OpenAI, Anthropic, Groq, Mistral, Google, Ollama, HuggingFace, etc.) — same as upstream.
 - Only the feedback-scored task cards: Reality Monitoring (`rm_*`) and paired-associate learning (`pal50`) — see [`examples/tasks/`](examples/tasks/).
 - `CustomAgent`/`ScanningAgent` adapter protocol, for plugging in your own agent.
