@@ -38,6 +38,13 @@ Library = Literal["psychscanner", "primal", "all"]
 _DISTROS: tuple[str, ...] = ("psychscanner", "primal")
 
 
+# ponytail: _installed_distro/_sync_repo are byte-identical to their copy in
+# psychscanner/src/psychscanner/library_download.py. Not factored into a
+# shared package on purpose -- the two distros can never be co-installed
+# (same `psychscanner` import name), so a shared dependency would only add a
+# third package to version without removing that constraint. Keep both
+# copies in sync by hand; if a fix here also applies there, apply it there
+# too.
 def _installed_distro() -> str | None:
     """Which of psychscanner/psychscanner-primal is installed here, if either
     (they share the `psychscanner` import name, so at most one really is)."""

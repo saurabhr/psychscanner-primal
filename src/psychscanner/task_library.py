@@ -37,6 +37,12 @@ __all__ = ["list_task_library", "task_library"]
 
 DirsArg = Union[str, "os.PathLike[str]", list, None]
 
+# ponytail: primal only recognizes .json, unlike the full psychscanner
+# package's task_library() which also matches .tcard.psyscan. This is
+# intentional, not drift -- primal never ships save_task_card()/TASK_CARD_EXT
+# (see psyscan-library's README: "primal cards are plain .json only"), so
+# there's no .tcard.psyscan format to look for here.
+
 
 def _search_dirs(dirs: DirsArg = None) -> list[Path]:
     result = []
