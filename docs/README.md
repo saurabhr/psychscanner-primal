@@ -24,5 +24,5 @@ marimo-book clean
 
 - `book.yml` — TOC, theme, branding, launch-button config
 - `content/` — your `.md` and marimo `.py` chapters
-- `.github/workflows/deploy.yml` — builds and publishes to GitHub Pages
+- `.github/workflows/deploy-docs.yml` — builds and publishes to GitHub Pages
   on every push to `main` (edit or delete as needed)
