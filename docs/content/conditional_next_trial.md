@@ -1,7 +1,7 @@
 # Conditional Next Trial
 
-psychscanner-primal keeps only feedback-scored tasks (Reality Monitoring, paired-
-associate learning) — tasks where a trial has a real correct/incorrect signal. That
+psychscanner-primal keeps only feedback-scored tasks (see the
+[Demonstration Suite](demonstration_suite.md)) — tasks where a trial has a real correct/incorrect signal. That
 signal makes adaptive designs a natural fit: retry a trial when the response doesn't
 parse, raise or lower difficulty based on accuracy, or insert a follow-up probe — all
 decided at run time from the model's actual response, not fixed in the task card

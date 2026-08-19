@@ -51,6 +51,8 @@ toc:
     title: Using psychscanner-primal
   - file: content/prime_intellect_hub.md
     title: Prime Intellect Environments Hub
+  - file: content/demonstration_suite.md
+    title: Demonstration Suite
   - file: content/quickstart.py
   - file: content/cli_reference.md
     title: CLI reference

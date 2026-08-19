@@ -25,7 +25,7 @@ This package exists as a lightweight dependency for RL/eval tooling such as the 
 **Included:**
 - Core runtime: `ExpCard`/`ExpCardInit`, `ScannerModel`, `TaskRunner`, `FeedbackBase`, `NextTrialBase`, parsers, `task_library`, `download_lib`, `SessionTunnel`, `SimulationModel`.
 - Multi-provider model calling via LangChain (OpenAI, Anthropic, Groq, Mistral, Google, Ollama, HuggingFace, etc.) — same as upstream.
-- Only the feedback-scored task cards: Reality Monitoring (`rm_*`) and paired-associate learning (`pal50`) — see [`examples/tasks/`](examples/tasks/).
+- Only the feedback-scored task cards: `rm_*` and `pal50` — see [`examples/tasks/`](examples/tasks/) and the [Demonstration Suite](https://saurabhr.github.io/psychscanner-primal/demonstration_suite/) docs.
 - `CustomAgent`/`ScanningAgent` adapter protocol, for plugging in your own agent.
 
 **Excluded:**
