@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "psychscanner-primal"
-description = "Slim, Hub-optimized distribution of psychscanner: the feedback-scored cognitive tasks (Reality Monitoring, paired-associate recall) as a lightweight dependency for RL/eval environments."
+description = "Slim, Hub-optimized distribution of psychscanner: the feedback-scored cognitive tasks (rm_*, paired-associate recall) as a lightweight dependency for RL/eval environments."
 authors = [{name = "Saurabh Ranjan", email = "ranjan.saurabh@outlook.com"}]
 readme = "README.md"
 license = {file = "LICENSE"}
