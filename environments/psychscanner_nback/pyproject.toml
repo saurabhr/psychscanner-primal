@@ -3,7 +3,7 @@ name = "psychscanner-nback"
 description = "N-back working-memory task from psychscanner: judge whether the current letter matches the one n positions back, under conversation- vs summary-memory history conditions."
 tags = ["psychology", "cognitive-science", "working-memory", "single-turn", "train", "eval"]
 version = "0.1.0"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "verifiers>=0.2.1",
 ]
